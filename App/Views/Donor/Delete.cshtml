@@ -1,0 +1,17 @@
+﻿@model BLL.DTOs.DonorDTO
+
+<h2>Delete Donor</h2>
+
+<form method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <h4>Are you sure?</h4>
+    <p>Blood Group : @Model.BloodGroup</p>
+    <p>Location : @Model.Location</p>
+
+    <p>Phone : @Model.Phone</p>
+    <p>Last Donation Date : @Model.LastDonationDate</p>
+    <input type="submit" name="Decision" value="Yes" class="btn btn-danger" />
+    <input type="submit" name="Decision" value="No" class="btn btn-secondary" />
+
+</form>

@@ -1,0 +1,36 @@
+﻿@model BLL.DTOs.UserDTO
+
+<h2>Edit User</h2>
+
+<form method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <input type="text" name="Name" value="@Model.Name" placeholder="Name" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+
+    <br />
+
+    <input type="text" name="Email" value="@Model.Email" placeholder="Email" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Email")</span>
+
+    <br />
+
+    <input type="password" name="Password" value="@Model.Password" placeholder="Password" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Password")</span>
+
+    <br />
+
+    <input type="password" name="ConfirmPassword" value="@Model.Password" placeholder="Confirm Password" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("ConfirmPassword")</span>
+
+    <br />
+
+    <input type="text" name="Role" value="@Model.Role" placeholder="Role" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Role")</span>
+
+    <br />
+
+    <input type="submit" value="Update" class="btn btn-warning" />
+
+</form>

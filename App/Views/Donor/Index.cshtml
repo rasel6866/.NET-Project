@@ -1,0 +1,38 @@
+﻿@model List<BLL.DTOs.DonorDTO>
+<h2>Donor List</h2>
+<a href="/Auth/Dashboard" class="btn btn-secondary">
+    Back To Dashboard
+</a>
+<a href="/Donor/Create" class="btn btn-primary">
+    Create
+</a>
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Blood Group</th>
+        <th>Location</th>
+        <th>Phone</th>
+        <th>Last Donation Date</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>@d.Id</td>
+            <td>@d.BloodGroup</td>
+            <td>@d.Location</td>
+            <td>@d.Phone</td>
+            <td>@d.LastDonationDate</td>
+            <td>
+                <a href="/Donor/Edit/@d.Id" class="btn btn-warning">
+                    Edit
+                </a>
+                <a href="/Donor/Delete/@d.Id" class="btn btn-danger">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    }
+</table>

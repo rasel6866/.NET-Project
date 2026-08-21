@@ -1,0 +1,12 @@
+﻿@model BLL.DTOs.UserDTO
+<h2>Delete User</h2>
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <h4>Are you sure?</h4>
+    <p>Name : @Model.Name</p>
+    <p>Email : @Model.Email</p>
+    <p>Role : @Model.Role</p>
+    <input type="submit" name="Decision" value="Yes" class="btn btn-danger" />
+    <input type="submit" name="Decision" value="No" class="btn btn-secondary" />
+
+</form>

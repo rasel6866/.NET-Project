@@ -1,0 +1,21 @@
+﻿@model BLL.DTOs.DonorDTO
+
+<h2>Create Donor</h2>
+
+<form method="post">
+    <input type="text" name="BloodGroup" value="@Model.BloodGroup" placeholder="Blood Group" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("BloodGroup")</span>
+    <br />
+    <input type="text" name="Location" value="@Model.Location" placeholder="Location" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Location")</span>
+    <br />
+    <input type="text" name="Phone" value="@Model.Phone" placeholder="Phone" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Phone")</span>
+    <br />
+    <input type="date" name="LastDonationDate" class="form-control" />
+    <br />
+    <input type="text" name="Uid" value="@Model.Uid" placeholder="User Id" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Uid")</span>
+    <br />
+    <input type="submit" value="Create" class="btn btn-primary" />
+</form>

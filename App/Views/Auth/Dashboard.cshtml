@@ -1,0 +1,30 @@
+﻿<h2>Welcome @ViewBag.Name</h2>
+
+<h3>Role : @ViewBag.Role</h3>
+
+<br />
+
+@if (ViewBag.Role == "Admin")
+{
+    <a href="/User/Index" class="btn btn-info">
+        Manage Users
+    </a>
+    <a href="/Donor/Index" class="btn btn-primary">
+        Manage Donors
+    </a>
+    <a href="/BloodStock/Index" class="btn btn-success">
+        Blood Stocks
+    </a>
+    <a href="/BloodRequest/Index" class="btn btn-dark">
+        Blood Requests
+    </a>
+}
+else
+{
+    <a href="/User/Edit/@ViewBag.Id" class="btn btn-warning">
+        Edit Profile
+    </a>
+}
+<a href="/Auth/Logout" class="btn btn-danger">
+    Logout
+</a>

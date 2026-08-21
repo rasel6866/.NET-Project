@@ -1,0 +1,21 @@
+﻿@model BLL.DTOs.BloodStockDTO
+
+<h2>Edit Blood Stock</h2>
+
+<form method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <input type="text" name="BloodGroup" value="@Model.BloodGroup" placeholder="Blood Group" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("BloodGroup")</span>
+
+    <br />
+
+    <input type="number" name="Quantity" value="@Model.Quantity" placeholder="Quantity" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Quantity")</span>
+
+    <br />
+
+    <input type="submit" value="Update" class="btn btn-warning" />
+
+</form>

@@ -1,0 +1,36 @@
+﻿@model List<BLL.DTOs.BloodStockDTO>
+<h2>Blood Stock List</h2>
+<a href="/Auth/Dashboard" class="btn btn-secondary">
+    Back To Dashboard
+</a>
+<a href="/BloodStock/Create" class="btn btn-primary">
+    Create
+</a>
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Blood Group</th>
+        <th>Quantity</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.BloodGroup</td>
+            <td>@item.Quantity</td>
+            <td>
+                <a href="/BloodStock/Edit/@item.Id"
+                       class="btn btn-warning">
+                    Edit
+                </a>
+                <a href="/BloodStock/Delete/@item.Id"
+                       class="btn btn-danger">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    }
+</table>

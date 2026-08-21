@@ -1,0 +1,38 @@
+﻿@model BLL.DTOs.UserDTO
+
+<h2>Create User</h2>
+
+<form method="post">
+
+    <input type="text" name="Name" value="@Model.Name" placeholder="Name" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+
+    <br />
+
+    <input type="text" name="Email" value="@Model.Email" placeholder="Email" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Email")</span>
+
+    <br />
+
+    <input type="password" name="Password" placeholder="Password" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("Password")</span>
+
+    <br />
+    
+    <input type="password" name="ConfirmPassword" placeholder="Confirm Password" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("ConfirmPassword")</span>
+
+    <br />
+    <select name="Role" class="form-control">
+        <option disabled selected>--Select Role--</option>
+        <option value="Admin">Admin</option>
+        <option value="Donor">Donor</option>
+        
+    </select>
+    <span asp-validation-for="Role" class="text-danger"></span>
+
+    <br />
+
+    <input type="submit" value="Create" class="btn btn-primary" />
+
+</form>

@@ -1,0 +1,19 @@
+﻿@model BLL.DTOs.BloodStockDTO
+<h2>Delete Blood Stock</h2>
+<h4>Are you sure?</h4>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Blood Group</th>
+        <td>@Model.BloodGroup</td>
+    </tr>
+    <tr>
+        <th>Quantity</th>
+        <td>@Model.Quantity</td>
+    </tr>
+</table>
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="submit" name="Decision" value="Yes" class="btn btn-danger" />
+    <input type="submit" name="Decision" value="No" class="btn btn-secondary" />
+</form>
