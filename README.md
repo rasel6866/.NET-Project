@@ -3,7 +3,6 @@
 A web-based **Blood Bank Management System** built with **ASP.NET Core MVC, C#, Entity Framework Core, SQL Server, and N-Tier Architecture**.
 
 ## Features
-
 ### User
 
 * User Registration
